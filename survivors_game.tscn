@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bnpes65hxnglq" path="res://pine_tree.tscn" id="2_32l35"]
 
 [node name="Game" type="Node2D"]
+y_sort_enabled = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1920.0
