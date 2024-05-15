@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjafonvb1o423"]
+[gd_scene load_steps=8 format=3 uid="uid://bjafonvb1o423"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_cp4x2"]
 [ext_resource type="Script" path="res://player.gd" id="1_u1dh7"]
@@ -6,6 +6,23 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8xsat"]
 radius = 29.15
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wbwne"]
+radius = 39.8121
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpl6l"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dktna"]
+bg_color = Color(0.392157, 0.87451, 0.384314, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_u1dh7")
@@ -20,3 +37,23 @@ shape = SubResource("CircleShape2D_8xsat")
 
 [node name="Gun" parent="." instance=ExtResource("3_r3ava")]
 position = Vector2(0, -40)
+
+[node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CircleShape2D_wbwne")
+debug_color = Color(0.956863, 0, 0.545098, 0.419608)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -88.0
+offset_top = -128.0
+offset_right = 88.0
+offset_bottom = -101.0
+theme_override_styles/background = SubResource("StyleBoxFlat_wpl6l")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dktna")
+value = 100.0
+show_percentage = false
