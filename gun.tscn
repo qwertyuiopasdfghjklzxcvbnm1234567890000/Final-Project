@@ -14,11 +14,12 @@ script = ExtResource("1_2ypj6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xvr7a")
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="WeaponPivot" type="Marker2D" parent="."]
 
-[node name="Pistol" type="Sprite2D" parent="Marker2D"]
+[node name="Pistol" type="Sprite2D" parent="WeaponPivot"]
 position = Vector2(107, -13)
 texture = ExtResource("1_dgua8")
 
-[node name="ShootingPoint" type="Marker2D" parent="Marker2D/Pistol"]
+[node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/Pistol"]
+unique_name_in_owner = true
 position = Vector2(25, -10)

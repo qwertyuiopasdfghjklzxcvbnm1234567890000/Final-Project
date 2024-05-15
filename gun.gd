@@ -6,3 +6,9 @@ func _physics_process(delta):
 	if enemies_in_range.size() > 0:
 		var target_enemy = enemies_in_range.front()
 		look_at(target_enemy.global_position)
+
+
+func shoot_sperm_cells():
+	const BULLET = preload("res://bullet.tscn")
+	var new_bullet = BULLET.instantiate()
+	new_bullet.global_position = %ShootingPoint
