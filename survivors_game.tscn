@@ -1,11 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://doj66wnhrbm0s"]
+[gd_scene load_steps=5 format=3 uid="uid://doj66wnhrbm0s"]
 
+[ext_resource type="Script" path="res://survivors_game.gd" id="1_8ccyt"]
 [ext_resource type="PackedScene" uid="uid://bjafonvb1o423" path="res://player.tscn" id="1_v043t"]
 [ext_resource type="PackedScene" uid="uid://bnpes65hxnglq" path="res://pine_tree.tscn" id="2_32l35"]
-[ext_resource type="PackedScene" uid="uid://d13xgufd5x74y" path="res://mob.tscn" id="3_o1mjk"]
+
+[sub_resource type="Curve2D" id="Curve2D_kj7jj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -174, -128, 0, 0, 0, 0, 2012, -123, 0, 0, 0, 0, 2015, 1171, 0, 0, 0, 0, -163, 1155, 0, 0, 0, 0, -172, -127)
+}
+point_count = 5
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_8ccyt")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -39
@@ -16,6 +23,15 @@ offset_bottom = 1080.0
 
 [node name="Player" parent="." instance=ExtResource("1_v043t")]
 position = Vector2(817, 578)
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-817, -578)
+curve = SubResource("Curve2D_kj7jj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-174, -128)
+rotation = 0.00228728
 
 [node name="PineTree" parent="." instance=ExtResource("2_32l35")]
 position = Vector2(215, 798)
@@ -41,14 +57,8 @@ position = Vector2(1275, 624)
 [node name="PineTree8" parent="." instance=ExtResource("2_32l35")]
 position = Vector2(1499, 418)
 
-[node name="Mob" parent="." instance=ExtResource("3_o1mjk")]
-position = Vector2(1653, 636)
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
 
-[node name="Mob2" parent="." instance=ExtResource("3_o1mjk")]
-position = Vector2(936, 950)
-
-[node name="Mob3" parent="." instance=ExtResource("3_o1mjk")]
-position = Vector2(134, 204)
-
-[node name="Mob4" parent="." instance=ExtResource("3_o1mjk")]
-position = Vector2(1078, 217)
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
