@@ -1,10 +1,15 @@
-[gd_scene format=3 uid="uid://c1t00t8pn3orn"]
+[gd_scene load_steps=2 format=3 uid="uid://c1t00t8pn3orn"]
+
+[sub_resource type="Gradient" id="Gradient_rpyn0"]
+offsets = PackedFloat32Array(0, 0.16, 1)
+colors = PackedColorArray(0.490196, 0, 0, 1, 0.8, 0.247059, 0.168627, 0.282353, 1, 1, 1, 1)
 
 [node name="BloodParticles" type="CPUParticles2D"]
 amount = 1000
-randomness = 0.95
+randomness = 1.0
+lifetime_randomness = 1.0
 emission_shape = 1
-emission_sphere_radius = 10.0
+emission_sphere_radius = 3.98
 spread = 180.0
 initial_velocity_max = 136.36
 angular_velocity_min = 118.89
@@ -16,4 +21,4 @@ angle_max = 720.0
 scale_amount_min = 0.0
 scale_amount_max = 6.05
 color = Color(0.607843, 0, 0.14902, 1)
-hue_variation_max = 0.1
+color_ramp = SubResource("Gradient_rpyn0")

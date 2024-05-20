@@ -26,10 +26,6 @@ offset_bottom = 1080.0
 [node name="Player" parent="." instance=ExtResource("1_v043t")]
 position = Vector2(817, 578)
 
-[node name="BloodOverlay" type="Sprite2D" parent="Player"]
-scale = Vector2(1.5007, 1.47384)
-texture = ExtResource("3_dbfpc")
-
 [node name="Path2D" type="Path2D" parent="Player"]
 position = Vector2(-817, -578)
 curve = SubResource("Curve2D_kj7jj")
@@ -76,6 +72,12 @@ autostart = true
 [node name="GameOver" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
 visible = false
+
+[node name="BloodOverlay" type="Sprite2D" parent="GameOver"]
+unique_name_in_owner = true
+position = Vector2(960, 546.268)
+scale = Vector2(1.49687, 1.35567)
+texture = ExtResource("3_dbfpc")
 
 [node name="ColorRect" type="ColorRect" parent="GameOver"]
 anchors_preset = 15
