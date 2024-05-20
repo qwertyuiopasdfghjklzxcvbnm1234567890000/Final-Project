@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c1t00t8pn3orn"]
+
+[node name="BloodParticles" type="CPUParticles2D"]
+amount = 1000
+randomness = 0.95
+emission_shape = 1
+emission_sphere_radius = 10.0
+spread = 180.0
+initial_velocity_max = 136.36
+angular_velocity_min = 118.89
+angular_velocity_max = 555.25
+linear_accel_max = 73.74
+radial_accel_max = 100.0
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 0.0
+scale_amount_max = 6.05
+color = Color(0.607843, 0, 0.14902, 1)
+hue_variation_max = 0.1
