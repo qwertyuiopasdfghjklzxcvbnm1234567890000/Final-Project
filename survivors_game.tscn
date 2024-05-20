@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://doj66wnhrbm0s"]
+[gd_scene load_steps=6 format=3 uid="uid://doj66wnhrbm0s"]
 
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_8ccyt"]
 [ext_resource type="PackedScene" uid="uid://bjafonvb1o423" path="res://player.tscn" id="1_v043t"]
 [ext_resource type="PackedScene" uid="uid://bnpes65hxnglq" path="res://pine_tree.tscn" id="2_32l35"]
 [ext_resource type="Texture2D" uid="uid://b5om4ila8fp4c" path="res://BloodOverlay.png" id="3_dbfpc"]
-[ext_resource type="PackedScene" uid="uid://c1t00t8pn3orn" path="res://blood_particles.tscn" id="3_n4qmr"]
 
 [sub_resource type="Curve2D" id="Curve2D_kj7jj"]
 _data = {
@@ -35,10 +34,11 @@ unique_name_in_owner = true
 position = Vector2(-174, -128)
 rotation = 0.00228728
 
-[node name="BloodParticles" parent="Player" instance=ExtResource("3_n4qmr")]
+[node name="BloodOverlay2" type="Sprite2D" parent="Player"]
 unique_name_in_owner = true
-position = Vector2(-4, -46)
-emitting = false
+position = Vector2(-0.999985, 1)
+scale = Vector2(1.49687, 1.35567)
+texture = ExtResource("3_dbfpc")
 
 [node name="PineTree" parent="." instance=ExtResource("2_32l35")]
 position = Vector2(215, 798)

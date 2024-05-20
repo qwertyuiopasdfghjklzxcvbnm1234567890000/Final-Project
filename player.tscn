@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjafonvb1o423"]
+[gd_scene load_steps=9 format=3 uid="uid://bjafonvb1o423"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_cp4x2"]
 [ext_resource type="Script" path="res://player.gd" id="1_u1dh7"]
 [ext_resource type="PackedScene" uid="uid://dlymuuvhtd3ss" path="res://gun.tscn" id="3_r3ava"]
+[ext_resource type="PackedScene" uid="uid://c1t00t8pn3orn" path="res://blood_particles.tscn" id="4_mogvm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8xsat"]
 radius = 29.15
@@ -57,3 +58,6 @@ theme_override_styles/background = SubResource("StyleBoxFlat_wpl6l")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dktna")
 value = 100.0
 show_percentage = false
+
+[node name="BloodParticles" parent="." instance=ExtResource("4_mogvm")]
+position = Vector2(-4, -66)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dhmhmrth6rdce"]
+[gd_scene load_steps=14 format=3 uid="uid://dhmhmrth6rdce"]
 
 [ext_resource type="Shader" path="res://smoke_explosion/smoke_explosion.gdshader" id="1_bmef6"]
 [ext_resource type="Script" path="res://smoke_explosion/smoke_explosion.gd" id="1_kb8ql"]
+[ext_resource type="PackedScene" uid="uid://c1t00t8pn3orn" path="res://blood_particles.tscn" id="3_2f8r5"]
 
 [sub_resource type="Gradient" id="Gradient_obal6"]
 interpolation_mode = 1
@@ -144,7 +145,11 @@ color = Color(0.568627, 0.568627, 0.568627, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
-autoplay = "RESET"
 libraries = {
 "": SubResource("AnimationLibrary_8msef")
 }
+autoplay = "RESET"
+
+[node name="BloodParticles" parent="." instance=ExtResource("3_2f8r5")]
+one_shot = true
+explosiveness = 0.5

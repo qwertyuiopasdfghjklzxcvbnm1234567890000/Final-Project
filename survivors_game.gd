@@ -18,4 +18,4 @@ func _on_timer_timeout():
 func _on_player_health_delpleted():
 	%GameOver.visible = true
 	%BloodParticles.emitting = true
-	get_node("Player/Gun").paused
+	get_tree().paused
