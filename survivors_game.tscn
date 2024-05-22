@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_8ccyt"]
 [ext_resource type="PackedScene" uid="uid://bjafonvb1o423" path="res://player.tscn" id="1_v043t"]
 [ext_resource type="PackedScene" uid="uid://bnpes65hxnglq" path="res://pine_tree.tscn" id="2_32l35"]
-[ext_resource type="PackedScene" uid="uid://dlob03tr44w50" path="res://dynamic_blood_overlay.tscn" id="3_0e3g8"]
 [ext_resource type="Texture2D" uid="uid://b5om4ila8fp4c" path="res://BloodOverlay.png" id="3_dbfpc"]
+[ext_resource type="PackedScene" uid="uid://dlob03tr44w50" path="res://dynamic_blood_overlay.tscn" id="3_licc6"]
 
 [sub_resource type="Curve2D" id="Curve2D_kj7jj"]
 _data = {
@@ -35,7 +35,7 @@ unique_name_in_owner = true
 position = Vector2(-174, -128)
 rotation = 0.00228728
 
-[node name="DynamicBloodOverlay" parent="Player" instance=ExtResource("3_0e3g8")]
+[node name="DynamicBloodOverlay" parent="Player" instance=ExtResource("3_licc6")]
 visible = false
 
 [node name="PineTree" parent="." instance=ExtResource("2_32l35")]
