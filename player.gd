@@ -22,3 +22,4 @@ func _physics_process(delta):
 		%ProgressBar.value = health
 		if health <= 0.0:
 			health_delpleted.emit()
+	
