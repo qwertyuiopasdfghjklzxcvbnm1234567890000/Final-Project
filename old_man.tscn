@@ -1,14 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://c2ybsgsu1ni5k"]
 
-[ext_resource type="Texture2D" uid="uid://gm3wma78w7yb" path="res://placeholder.jpg" id="1_g1btt"]
+[ext_resource type="Texture2D" uid="uid://gm3wma78w7yb" path="res://placeholder.jpg" id="1_5gocm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_irutb"]
 
 [node name="OldMan" type="CharacterBody2D"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_irutb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1.4, 0.559999)
-texture = ExtResource("1_g1btt")
+texture = ExtResource("1_5gocm")
