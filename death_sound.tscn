@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6n0ff50kstoc"]
+
+[ext_resource type="AudioStream" uid="uid://dgbkwgpcp3w7i" path="res://Blood Splatter Sound Effect.wav" id="1_coygx"]
+
+[node name="DeathSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_coygx")
