@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy6dbokq0r7qk"]
+
+[ext_resource type="AudioStream" uid="uid://f87fxmf1xg47" path="res://Gunshot-Sound-Effect-Single-Shot.wav" id="1_jskt4"]
+
+[node name="GunShotSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_jskt4")
+autoplay = true
