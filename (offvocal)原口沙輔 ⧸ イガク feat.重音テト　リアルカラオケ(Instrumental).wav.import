@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b6674kbhrp720"
+path="res://.godot/imported/(offvocal)原口沙輔 ⧸ イガク feat.重音テト　リアルカラオケ(Instrumental).wav-99af665da38302c014051555fef20a14.sample"
+
+[deps]
+
+source_file="res://(offvocal)原口沙輔 ⧸ イガク feat.重音テト　リアルカラオケ(Instrumental).wav"
+dest_files=["res://.godot/imported/(offvocal)原口沙輔 ⧸ イガク feat.重音テト　リアルカラオケ(Instrumental).wav-99af665da38302c014051555fef20a14.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
