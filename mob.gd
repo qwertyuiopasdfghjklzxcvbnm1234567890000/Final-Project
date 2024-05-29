@@ -18,6 +18,10 @@ func _physics_process(delta):
 func take_damage():
 	health -= 1
 	%Slime.play_hurt()
+
+func nuked():
+	%Slime.play_hurt()
+	health = 0
 	
 	if health == 0:
 		queue_free()
@@ -25,3 +29,4 @@ func take_damage():
 	var smoke = SMOKE_SCENE.instantiate()
 	get_parent().add_child(smoke)
 	smoke.global_position = global_position
+	

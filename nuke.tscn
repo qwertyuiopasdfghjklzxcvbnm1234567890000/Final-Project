@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo70t6g4ufobf"]
+
+[ext_resource type="Texture2D" uid="uid://dmayhqwmdjuph" path="res://cartoon-nuclear-bomb-icon-s4cojd1zsrw77uhf-s4cojd1zsrw77uhf.jpg.png" id="1_qhev1"]
+[ext_resource type="Script" path="res://Nuke.gd" id="2_xsxbp"]
+
+[node name="Nuke" type="Sprite2D"]
+visibility_layer = 512
+scale = Vector2(0.682952, 0.682952)
+texture = ExtResource("1_qhev1")
+script = ExtResource("2_xsxbp")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
