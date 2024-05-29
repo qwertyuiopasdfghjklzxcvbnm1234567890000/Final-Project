@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://crla7qwx02ykd"]
+[gd_scene load_steps=2 format=3 uid="uid://crla7qwx02ykd"]
+
+[ext_resource type="AudioStream" uid="uid://b6674kbhrp720" path="res://(offvocal)原口沙輔 ⧸ イガク feat.重音テト　リアルカラオケ(Instrumental).wav" id="1_8ha22"]
 
 [node name="BackgroundMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_8ha22")
+autoplay = true
